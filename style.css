@@ -1,14 +1,17 @@
 *{
     margin: 0;
     padding: 0;
-    /* background-color: #2C2E43; */
-    background: #2C2E43;
+    /* background: #2C2E43; */
+}
+
+body{
+    background-color: #2C2E43;
     color: #FFD523;
+    font-family: 'Roboto', sans-serif;
 }
 
 .flex-container{
     display: flex;
-    border: 1px solid lightcoral;
 }
 
 .header{
@@ -29,21 +32,97 @@
 }
 
 .main-content{
-    margin: 3rem;
+    margin: 3rem 10rem 5rem 10rem;
     text-align: center;
+    background: #FFD523;
+    color: #2C2E43;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 7px 29px 0px;
 }
 
 .player-card{
-    margin: 1rem;
+    margin: 3rem;
+    padding: 1rem;
+}
+
+.current-score-card{
+    background: #2c2e43;
+    color: white;
+    margin: 0 auto 3rem auto;
+    width: 25%;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.7) 0px 1px 2px 0px, rgba(0, 0, 0, 0.7) 0px 1px 3px 1px;
     padding: 1rem;
 }
 
 .player--1{
     width: 50vw;
-    border: 4px solid seagreen;
 }
 
 .player--2{
+    position: relative;
     width: 50vw;
-    border: 4px solid seagreen;
+}
+
+.player-banner{
+    font-size: 3rem;
+    padding: 2rem;
+}
+
+.player-score{
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.current-score-text{
+    font-size: 1.3rem;
+    padding: 1rem;
+    font-weight: 300;
+}
+
+.current-score{
+    font-size: 1.3rem;
+    padding: 1rem;
+    font-weight: 700;
+}
+
+.btn{
+    background-color: rgba(255, 255, 255, 1);
+    font-family: 'Roboto', sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 15px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: .5rem 1.2rem;
+}
+
+.btn-roll-dice{
+    position:absolute;
+    top:1rem;
+    left:-4rem;
+}
+
+.btn-new-game{
+    position: absolute;
+    left: -4.3rem;
+    bottom: 5.5rem;
+}
+
+.btn-hold-score{
+    position:absolute;
+    left: -3rem;
+    bottom: 1.5rem;
+}
+
+/* .span-dice-number{
+    
+    color: #2C2E43;
+} */
+
+.img-dice{
+    visibility:hidden;
+    position: absolute;
+    top:8rem;
+    left: -2.1rem;
+    width: 7rem;
 }

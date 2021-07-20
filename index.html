@@ -5,14 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <title>The Reverse Pig Game</title>
 </head>
 <body>
     <header>
         <div class="flex-container header">
             <section class="header-name">
-                The Reverse Pig Game
+                <img src="/img/The Reverse pig game.png" alt="">
             </section>
             <section class="source-link">
                 <a href="#">Github</a>
@@ -20,32 +22,33 @@
         </div>
     </header>
     <main>
-        <button class="btn btn-roll-dice">Roll Dice</button>
-        <button class="btn">New Game</button>
-        <button class="btn btn-hold-score">Hold</button>
         <div class="flex-container main-content">
             <section class="player--1">
                 <div class="player-card">
-                    <p>Player 1</p>
-                    <span class="player--1--total--score">100</span>
+                    <p class="player-banner">PLAYER 1</p>
+                    <span class="player-score player--1--total--score">100</span>
                 </div>
-                <div class="player-card">
-                    <p>Current1</p>
-                    <span class="player--1--current--score">0</span>
+                <div class="current-score-card player-card">
+                    <p class="current-score-text">CURRENT</p>
+                    <span class="current-score player--1--current--score">0</span>
                 </div>
             </section>
             <section class="player--2">
                 <div class="player-card">
-                    <p>Player 2</p>
-                    <span class="player--2--total--score">100</span>    
+                    <button class="btn btn-roll-dice">🎲 ‏‏‎ ‏‏‎ ‎‎Roll Dice</button>
+                    <p class="player-banner">PLAYER 2</p>
+                    <span class="player-score player--2--total--score">100</span>    
                 </div>
-                <div class="player-card">
-                    <p>Current2</p>
-                    <span class="player--2--current--score">0</span>
+                <img src="" class="img-dice" alt="">
+                <div class="current-score-card player-card">
+                    <p class="current-score-text">CURRENT</p>
+                    <span class="current-score player--2--current--score">0</span>
+                    <button class="btn btn-new-game">🆕 ‏‏‎‏‏‎ ‎ ‎New Game</button>
+                    <button class="btn btn-hold-score">🤝 ‏‏‎‏‏‎ ‎ ‎Hold</button>
                 </div>
             </section>
         </div>
-        <span class="span-dice-number"></span>
+        
     </main>
     <script src="/script.js"></script>
 </body>
