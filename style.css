@@ -21,7 +21,7 @@ body{
 
 .header{
     justify-content: space-between;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .header-img{
@@ -141,3 +141,24 @@ body{
     width: 6rem;
     z-index: 3;
 }
+.img-popper-p1{
+    content: url(/img/tenor.gif);
+    /* src: url(/img/tenor.gif); */
+    position: absolute;
+    left: 48.5%;
+    transform: translateX(-35%);
+    top: 14.5rem;
+    z-index: 3;
+    width: 12rem;
+}
+
+/* .img-popper-p2{
+    content: url(/img/tenor.gif);
+    position: absolute;
+    left: 48.5%;
+    transform: translateX(-35%);
+    top: 14.5rem;
+    z-index: 3;
+    width: 12rem;
+} */
+
