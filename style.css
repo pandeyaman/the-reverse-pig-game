@@ -2,6 +2,11 @@
     margin: 0;
     padding: 0;
     /* background: #2C2E43; */
+    
+}
+
+html{
+    font-size: 16px;
 }
 
 body{
@@ -16,14 +21,20 @@ body{
 
 .header{
     justify-content: space-between;
+    border: 1px solid red;
 }
 
-.header-name{
+.header-img{
     margin: 1rem;
+}
+
+.header-img img{
+    width: 80%;
 }
 
 .source-link{
-    margin: 1rem;
+    margin: auto 1rem;
+
 }
 
 .btn{
@@ -56,12 +67,16 @@ body{
 }
 
 .player--1{
-    width: 50vw;
+    width: 50%;
+    /* box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; */
+    /* z-index: 1; */
+
 }
 
 .player--2{
-    position: relative;
-    width: 50vw;
+    width: 50%;
+    /* background: linear-gradient(rgba(255, 255, 255, 0.4),rgba(255,255,255,0.4)); */
+    /* d9af00 */
 }
 
 .player-banner{
@@ -96,22 +111,20 @@ body{
     padding: .5rem 1.2rem;
 }
 
-.btn-roll-dice{
+.btn-roll-dice,.btn-new-game,.btn-hold-score{
     position:absolute;
-    top:1rem;
-    left:-4rem;
+    left: 49%;
+    transform: translateX(-50%);
+    top: 11rem;
+    z-index: 5;
 }
 
 .btn-new-game{
-    position: absolute;
-    left: -4.3rem;
-    bottom: 5.5rem;
+    top: 27rem;
 }
 
 .btn-hold-score{
-    position:absolute;
-    left: -3rem;
-    bottom: 1.5rem;
+    top: 31rem;
 }
 
 /* .span-dice-number{
@@ -122,7 +135,9 @@ body{
 .img-dice{
     visibility:hidden;
     position: absolute;
-    top:8rem;
-    left: -2.1rem;
-    width: 7rem;
+    left: 49%;
+    transform: translateX(-35%);
+    top: 18.5rem;
+    width: 6rem;
+    z-index: 3;
 }

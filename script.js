@@ -10,10 +10,16 @@ const scorePlayerTwo = document.querySelector(".player--2--total--score");
 const currentScorePlayerOne = document.querySelector(".player--1--current--score");
 const currentScorePlayerTwo = document.querySelector(".player--2--current--score");   
 const diceImage = document.querySelector(".img-dice");
+const playerOneCardActive = document.querySelector(".player--1");
+const playerTwoCardActive = document.querySelector(".player--2");
 
 let playerOnePlays = true;
 let playerTwoPlays = false;
 let isActivePlayer,isActiveScore;
+
+let activeCard = playerOneCardActive;
+
+
 
 function diceNumberGenerator(){
     let randomNumber = Math.trunc(Math.random()*6+1);
@@ -57,7 +63,7 @@ function addScore(current,total){
             else{
                 playerOnePlays = true;
             }
-            
+            activePlayerCard();   
     }
     else{
         currentScore = Number(current.textContent);
@@ -70,7 +76,7 @@ function holdAndReduceScore(current,total){
     let score = Number(current.textContent); 
     let totalScore = Number(total.textContent);
     totalScore -= score;
-    if(totalScore<=80){
+    if(totalScore<=70){
         total.textContent = "WIN";
         rollDice.disabled = true;
         holdScore.disabled = true;
@@ -82,6 +88,7 @@ function holdAndReduceScore(current,total){
             playerOnePlays = false;
         else
             playerOnePlays = true;
+        activePlayerCard();
     }
 }
 
@@ -97,9 +104,31 @@ function resetGame(){
     isActiveScore = scorePlayerOne;
     playerOnePlays=true;
     playerTwoPlays=false;
+    activePlayerCard();
 
 }
 
+function activePlayerCard(){
+    if(playerOnePlays){
+        console.log("ative 1");
+        playerOneCardActive.style.boxShadow= "rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px";
+        playerOneCardActive.style.background = "#FFD523";
+        playerTwoCardActive.style.background = "linear-gradient(rgba(255, 255, 255, 0.4),rgba(255,255,255,0.4))";
+        playerTwoCardActive.style.transition = "0.8s";
+        playerTwoCardActive.style.boxShadow = ""; 
+    }
+    else{
+        console.log("ative 2");
+        playerTwoCardActive.style.boxShadow= "rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px";
+        playerTwoCardActive.style.transition = "0.8s";
+        playerTwoCardActive.style.background = "#FFD523";
+        playerOneCardActive.style.background = "linear-gradient(rgba(255, 255, 255, 0.4),rgba(255,255,255,0.4))";
+        playerOneCardActive.style.transition = "0.8s";
+
+    }
+}
+
+activePlayerCard();
 rollDice.addEventListener('click',playGame);
 holdScore.addEventListener('click',holdAndReduce);
 newGame.addEventListener("click",resetGame);
