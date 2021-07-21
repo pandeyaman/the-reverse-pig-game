@@ -76,10 +76,12 @@ function holdAndReduceScore(current,total){
     let score = Number(current.textContent); 
     let totalScore = Number(total.textContent);
     totalScore -= score;
-    if(totalScore<=70){
-        total.textContent = "WIN";
+    if(totalScore<=80){
+        total.textContent = "WINNER";
         rollDice.disabled = true;
         holdScore.disabled = true;
+        diceImage.classList.add("img-popper-p1");
+
     }
     else{
         total.textContent = totalScore;
@@ -123,7 +125,7 @@ function activePlayerCard(){
         playerTwoCardActive.style.transition = "0.8s";
         playerTwoCardActive.style.background = "#FFD523";
         playerOneCardActive.style.background = "linear-gradient(rgba(255, 255, 255, 0.4),rgba(255,255,255,0.4))";
-        playerOneCardActive.style.transition = "0.8s";
+        playerOneCardActive.style.transition = "0.3s";
 
     }
 }
