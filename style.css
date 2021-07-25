@@ -21,6 +21,7 @@ body{
 
 .header{
     justify-content: space-between;
+    margin: auto 10rem;
     /* border: 1px solid red; */
 }
 
@@ -34,7 +35,10 @@ body{
 
 .source-link{
     margin: auto 1rem;
-
+    text-decoration: none;
+    color: #FFD523;
+    font-size: 1.5rem;
+    border: 1px solid #FFD523;
 }
 
 .btn{
@@ -127,11 +131,6 @@ body{
     top: 31rem;
 }
 
-/* .span-dice-number{
-    
-    color: #2C2E43;
-} */
-
 .img-dice{
     visibility:hidden;
     position: absolute;
@@ -141,24 +140,83 @@ body{
     width: 6rem;
     z-index: 3;
 }
-.img-popper-p1{
+.img-popper-p1,.img-popper-p2{
     content: url(/img/tenor.gif);
     /* src: url(/img/tenor.gif); */
     position: absolute;
-    left: 48.5%;
+    left: 41.5%;
     transform: translateX(-35%);
-    top: 14.5rem;
+    transform: scaleX(-1);
+    top: 13rem;
     z-index: 3;
-    width: 12rem;
+    width: 13rem;
 }
 
-/* .img-popper-p2{
-    content: url(/img/tenor.gif);
-    position: absolute;
-    left: 48.5%;
-    transform: translateX(-35%);
-    top: 14.5rem;
-    z-index: 3;
-    width: 12rem;
-} */
+.img-popper-p2{
+    transform: none;
+    left: 45.5%;
+}
+
+@media screen and (max-width : 1125px) {
+    html{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width : 985px){
+    html{
+        font-size: 12px;
+    }
+    .header{
+        margin: auto 5rem;
+    }
+    .header-img img{
+        width: 60%;
+    }
+    .main-content{
+        margin: 1.5rem 5rem 2.5rem 5rem;
+    }
+    
+}
+
+@media screen and (max-width : 845px){
+    html{
+        font-size: 10px;
+    }
+    .header{
+        margin: auto 3rem;
+    }
+    .header-img img{
+        width: 50%;
+    }
+    
+}
+
+@media screen and (max-width : 690px){
+    html{
+        font-size: 8px;
+    }
+    .header{
+        margin: auto 3rem;
+    }
+    .header-img img{
+        width: 50%;
+    }
+    
+}
+
+@media screen and (max-width : 500px){
+    html{
+        font-size: 6px;
+    }
+    .header{
+        margin: auto 3rem;
+    }
+    .header-img img{
+        width: 50%;
+    }
+    
+}
+
+
 

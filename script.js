@@ -76,11 +76,14 @@ function holdAndReduceScore(current,total){
     let score = Number(current.textContent); 
     let totalScore = Number(total.textContent);
     totalScore -= score;
-    if(totalScore<=80){
+    if(totalScore<=90){
         total.textContent = "WINNER";
         rollDice.disabled = true;
         holdScore.disabled = true;
-        diceImage.classList.add("img-popper-p1");
+        if(playerOnePlays)
+            diceImage.classList.add("img-popper-p1");
+        else    
+            diceImage.classList.add("img-popper-p2");
 
     }
     else{
@@ -106,6 +109,9 @@ function resetGame(){
     isActiveScore = scorePlayerOne;
     playerOnePlays=true;
     playerTwoPlays=false;
+    diceImage.classList.remove("img-popper-p1");
+    diceImage.classList.remove("img-popper-p2");
+    diceImage.classList.add("img-dice'");
     activePlayerCard();
 
 }
